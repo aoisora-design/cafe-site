@@ -6,21 +6,33 @@ body {
     font-family: "Noto Sans JP", sans-serif;
     line-height: 1.5;
     font-size: 1.6rem;/*16px*/
+    color: #444;
+}
+/* パソコンでは改行を消す */
+.br-sp {
+    display: none;
+}
+/* スマホ,タブレットでは改行タグを表示する */
+@media screen and (max-width: 900px) {
+    .br-sp {
+    display: inline;
+    }
 }
 /* section */
 .section-wrap {
     padding: 80px 0;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .section-wrap {
-        padding: 40px 0 50px;
+        padding: 50px 0;
     }
 }
 .section-inner {
-    width: 1080px;
+    max-width: 1080px;
+    width: 90%;
     margin: 0 auto;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .section-inner {
         width: 96%;
     }  
@@ -29,7 +41,7 @@ body {
     width: 900px;
     margin: 0 auto;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .section-inner-s {
         width: 96%;
     }  
@@ -40,9 +52,9 @@ body {
     font-family: "Shippori Mincho", serif;
     font-size: 6rem;/*60px*/
     line-height: 87px;
-    color: #DBAF89;
+    color: #c9976b;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .section-ttl {
         font-size: 4rem;/*40px*/
         line-height: 50px;
@@ -55,7 +67,7 @@ body {
     bottom: 100%;
     font-family: "Noto Sans JP", sans-serif;
     font-size: 1.8rem;/*18px*/
-    color: #000;
+    color: #444;
     line-height: 1;
 }
 
@@ -76,20 +88,20 @@ body {
     text-align: center;
     margin-top: 60px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .btn-box {
         margin-top: 40px;
     }
 }
 .btn-link {
     display: inline-block;
-    border: 1px solid #DBAF89;
+    border: 1px solid #424c16;
     border-radius: 28px;
     font-weight: bold;
     padding: 14px 32px;
 }
 .btn-link:hover {
-    background-color: #DBAF89;
+    background-color: #424c16;
     color: #fff;
 }
 
@@ -107,7 +119,7 @@ body {
     padding: 16px 20px;
     z-index: 100;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .header {
         /*width: 94%;
         top: 10px;
@@ -117,12 +129,12 @@ body {
 .header-logo {
     width: 180px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .header-logo {
         width: 140px;
     }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .header-nav {
         display: none;
     }
@@ -134,7 +146,7 @@ body {
     margin-left: 40px;
 }
 /* icon */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .icon {
         display: none;
     }
@@ -149,7 +161,7 @@ body {
 .sp-header-btn {
     display: none;    
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .sp-header-btn {
         display: block;
         position: fixed;
@@ -191,7 +203,7 @@ body {
 .sp-menu {
     display: none;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .sp-menu {
         display: block;
         position: fixed;
@@ -216,7 +228,7 @@ body {
         margin-top: 50px;
     }
     .sp-menu-item + .sp-menu-item {
-        margin-top: 60px;
+        margin-top: 40px;
     }
     .sp-menu-item {
         position: relative;
@@ -224,7 +236,9 @@ body {
         font-size: 1.8rem;/*18px*/
     }
     .sp-menu-link {
-        font-weight: bold;
+        font-size: 2.4rem;/*24px*/
+        font-family: "Shippori Mincho", serif;
+
     }
     .sp-menu-link::before {
         position: absolute;
@@ -233,6 +247,7 @@ body {
         bottom: 100%;
         font-size: 1.4rem;/*14px*/
         font-weight: normal;
+        font-family: "Noto Sans JP", sans-serif;
         line-height: 1;
     }
     .sp-menu-link.__concept::before {
@@ -259,7 +274,7 @@ body {
     height: 768px;
     background-image: url(../img/kv.jpg);
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .kv.__index {
         height: 400px;
     }
@@ -267,12 +282,13 @@ body {
 .kv.__menu {
     height: 500px;
     background-image: url(../img/menu_kv.jpg);
+    background-position: bottom center;
 }
 .kv.__info {
     height: 500px;
     background-image: url(../img/info_kv.jpg);
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .kv.__menu,.kv.__info {
         height: 300px;
     }
@@ -280,10 +296,11 @@ body {
 .kv-copy {
     font-family: "Noto Serif JP", serif;
     font-size: 2.6rem;
+    text-shadow: 0px 0px 5px rgba(67, 36, 16, 1);
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .kv-copy {
-        font-size: 2.0rem;
+        font-size: 2.4rem;
     }
 }
 .kv-copy,.kv-detail {
@@ -292,6 +309,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    white-space: nowrap;
 }
 
 .kv-detail .section-ttl {
@@ -307,7 +325,7 @@ body {
     font-size: 3.2rem;/*32px*/
     margin-top: 40px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .concept-copy {
         font-size: 2.4rem;/*24px*/
         margin-top: 30px;
@@ -321,7 +339,7 @@ body {
     height: 350px;
     margin-top: 80px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .concept-img-box {
         height: 250px;
         margin-top: 50px;
@@ -337,12 +355,12 @@ body {
     align-items: center;
     margin-top: 80px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .concept-detail {
         margin-top: 40px;
     }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .concept-detail {
         flex-direction: column;
     }
@@ -350,7 +368,7 @@ body {
 .concept-detail-content {
     width: 400px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .concept-detail-content {
         width: auto;
     }
@@ -360,7 +378,7 @@ body {
     font-weight: bold;
     font-size: 3.2rem;/*32px*/
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .concept-detail-copy {
         font-size: 2.4rem;/*24px*/
     }
@@ -376,11 +394,12 @@ body {
     display: flex;
     justify-content: space-between;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .concept-detail-img-wrap {
         justify-content: center;
         width: 100%;
         height: auto;
+        margin-top: 24px;
     }
 }
 .concept-detail-img-box {
@@ -388,11 +407,11 @@ body {
     max-height: 390px;
     margin-top: 60px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .concept-detail-img-box {
         max-width: 48%;
         width: 100%;
-        max-height: 220px;
+        max-height: 60%;
         /*margin-top: 60px;*/
     }
 }
@@ -417,7 +436,7 @@ body {
     flex-wrap: wrap;
     margin-top: 60px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .menu-wrap {
         justify-content: center;
         flex-wrap: nowrap;
@@ -430,12 +449,18 @@ body {
     margin-top: 0;
 }
 .menu-item {
-    width: 340px;
+    width: 32%;
+    max-width: 340px;
+}
+@media screen and (max-width: 767px) {/*スマホのみ*/
+    .menu-item {
+        width: 100%;
+    }
 }
 .menu-item:nth-of-type(n + 4) {
     margin-top: 40px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .menu-item:nth-of-type(n + 2) {
         margin-top: 40px;
     }
@@ -469,7 +494,7 @@ body {
 .info-content + .info-content {
     margin-top: 40px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .info-content + .info-content {
         margin-top: 16px;
     }
@@ -480,26 +505,26 @@ body {
 .info-icon {
     display: inline-block;
     font-size: 1.2rem;/*12px*/
-    margin-left: 26px;
+    margin-left: 16px;
     padding: 4px 8px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .info-icon {
         margin-left: 10px;
     }
 }
 .info-icon.__info-icon-info {
-    color: #FF9F51;
-    border: 1px solid #FF9F51;
+    color: #c9976b;
+    border: 1px solid #c9976b;
 }
 .info-icon.__info-icon-new {
-    color: #BA0000;
-    border: 1px solid #BA0000;
+    color: #424c16;
+    border: 1px solid #424c16;
 }
 .info-txt {
     margin-top: 16px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .info-txt {
         margin-top: 8px;
     }
@@ -542,7 +567,7 @@ body {
     font-weight: bold;
     margin-top: 12px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .infosingle .info-txt {
         font-size: 2.0rem;/*20px*/
     }
@@ -572,7 +597,7 @@ body {
     align-items: center;
     margin-top: 60px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .access-content {
         flex-direction: column;
         margin-top: 40px;
@@ -584,7 +609,7 @@ body {
     height: 300px;
     margin-right: 60px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .access-img-box {
         margin-right: 0;
     }
@@ -596,7 +621,7 @@ body {
 .access-info {
     width: 417px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .access-info {
         width: 96%;
         margin-top: 30px;
@@ -626,7 +651,7 @@ body {
 .footer-nav-item + .footer-nav-item {
     margin-left: 40px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .footer-nav-item + .footer-nav-item {
         margin-left: 24px;
     }
