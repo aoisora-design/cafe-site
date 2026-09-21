@@ -145,6 +145,9 @@ body {
 /* sp-header-btn */
 @media screen and (max-width: 767px) {
     .sp-header-btn {
+        position: fixed;
+        top: 10px;
+        right: 8%;
         z-index: 200;
     }
     .sp-header-btn-link {
