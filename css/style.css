@@ -366,11 +366,13 @@ body {
     }
 }
 .concept-detail-content {
-    width: 400px;
+    max-width: 450px;
+    width: 41%;
 }
 @media screen and (max-width: 900px) {
     .concept-detail-content {
-        width: auto;
+        max-width: max-content;
+        width: 100%;
     }
 }
 .concept-detail-copy {
@@ -389,8 +391,9 @@ body {
 }
 .concept-detail-img-wrap {
     /*position: relative;*/
-    width: 580px;
-    height: 450px;
+    max-width: 580px;
+    width: 50%;
+    max-height: 450px;
     display: flex;
     justify-content: space-between;
 }
@@ -399,11 +402,12 @@ body {
         justify-content: center;
         width: 100%;
         height: auto;
-        margin-top: 24px;
+        margin-top: 30px;
     }
 }
 .concept-detail-img-box {
     max-width: 280px;
+    width: 100%;
     max-height: 390px;
     margin-top: 60px;
 }
