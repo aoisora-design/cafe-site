@@ -37,8 +37,8 @@ body {
 .section-ttl {
     position: relative;
     text-align: center;
+    font-family: "Shippori Mincho", serif;
     font-size: 6rem;/*60px*/
-    font-weight: bold;
     line-height: 87px;
     color: #DBAF89;
 }
@@ -53,6 +53,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     bottom: 100%;
+    font-family: "Noto Sans JP", sans-serif;
     font-size: 1.8rem;/*18px*/
     color: #000;
     line-height: 1;
@@ -98,25 +99,27 @@ body {
     justify-content: space-between;
     align-items: center;
     color: #fff;
-    width: 90%;
+    width: 100%;/*90*/
     position: absolute;
-    top: 40px;
-    left: 5%;
+    top: 0;/*40*/
+    background-color: #424c16;
+    /*left: 5%;*/
+    padding: 16px 20px;
     z-index: 100;
 }
 @media screen and (max-width: 767px) {
     .header {
-        width: 94%;
+        /*width: 94%;
         top: 10px;
-        left: 3%;
+        left: 3%;*/
     }
 }
 .header-logo {
-    width: 160px;
+    width: 180px;
 }
 @media screen and (max-width: 767px) {
     .header-logo {
-        width: 100px;
+        width: 140px;
     }
 }
 @media screen and (max-width: 767px) {
@@ -143,11 +146,15 @@ body {
     margin-left: 16px;
 }
 /* sp-header-btn */
+.sp-header-btn {
+    display: none;    
+}
 @media screen and (max-width: 767px) {
     .sp-header-btn {
+        display: block;
         position: fixed;
-        top: 10px;
-        right: 8%;
+        top: 6px;
+        right: 4%;
         z-index: 200;
     }
     .sp-header-btn-link {
@@ -163,9 +170,21 @@ body {
     }
     .sp-header-btn-box {
         display: block;
-        background-color: #fff;
+        background-color: #ddd;
         height: 4px;
         width: 40px;
+        transition: 0.6s;
+    }
+    .sp-header-btn.is-open .sp-header-btn-box:nth-child(1) {
+        transform: translateY(13px) rotate(45deg);
+    }
+
+    .sp-header-btn.is-open .sp-header-btn-box:nth-child(2) {
+        opacity: 0;
+    }
+
+    .sp-header-btn.is-open .sp-header-btn-box:nth-child(3) {
+        transform: translateY(-13px) rotate(-45deg);
     }
 }
 /* sp-menu */
@@ -180,7 +199,7 @@ body {
         right: 0;
         width: 100%;
         height: 100vh;
-        background-color: #6e5d10;
+        background-color: #424c16;
         transform: translateX(100%);
         transition: 0.6s;
         z-index: 100;
@@ -197,12 +216,15 @@ body {
         margin-top: 50px;
     }
     .sp-menu-item + .sp-menu-item {
-        margin-top: 40px;
+        margin-top: 60px;
     }
     .sp-menu-item {
         position: relative;
         text-align: center;
         font-size: 1.8rem;/*18px*/
+    }
+    .sp-menu-link {
+        font-weight: bold;
     }
     .sp-menu-link::before {
         position: absolute;
@@ -210,6 +232,7 @@ body {
         transform: translateX(-50%);
         bottom: 100%;
         font-size: 1.4rem;/*14px*/
+        font-weight: normal;
         line-height: 1;
     }
     .sp-menu-link.__concept::before {
@@ -254,7 +277,17 @@ body {
         height: 300px;
     }
 }
+.kv-copy {
+    font-family: "Noto Serif JP", serif;
+    font-size: 2.6rem;
+}
+@media screen and (max-width: 767px) {
+    .kv-copy {
+        font-size: 2.0rem;
+    }
+}
 .kv-copy,.kv-detail {
+    color: #fff;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -296,7 +329,7 @@ body {
 }
 .concept-img {
     object-fit: cover;
-    object-position: top;
+    object-position: center;
 }
 .concept-detail {
     display: flex;
@@ -368,11 +401,12 @@ body {
 }
 .concept-detail-img {
     object-fit: cover;
+    object-position: center;
     border-radius: 10px;
 }
 /* menu */
 .menu {
-    background-color: #FFE7D0;
+    background-color: #f2f1ea;
 }
 .menu.__detail {
     background-color: #FFF;
@@ -485,7 +519,7 @@ body {
     border: 1px solid #707070;
 }
 .page-btn-item.__current {
-    background-color: #FEE7D0;
+    background-color: #f2f1ea;
     border: none;
 }
 .page-btn-link {
@@ -530,7 +564,7 @@ body {
 }
 /* access */
 .access {
-    background-color: #FEE7D0;
+    background-color: #f2f1ea;
 }
 .access-content {
     display: flex;
@@ -576,7 +610,7 @@ body {
 }
 /* footer */
 .footer {
-    background-color: #DBAF89;
+    background-color: #424c16;
     color: #fff;
     padding: 60px 0 8px;
 }
