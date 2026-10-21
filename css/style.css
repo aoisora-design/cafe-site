@@ -8,14 +8,22 @@ body {
     font-size: 1.6rem;/*16px*/
     color: #444;
 }
-/* パソコンでは改行を消す */
+/* 900px以下で改行を表示（メインコピー用） */
 .br-sp {
     display: none;
 }
-/* スマホ,タブレットでは改行タグを表示する */
 @media screen and (max-width: 900px) {
     .br-sp {
     display: inline;
+    }
+}
+/* 960px以下で改行を非表示（コンセプト詳細コピー用） */
+.br-pc {
+    display: inline;
+}
+@media screen and (max-width: 960px) {
+    .br-pc {
+    display: none;
     }
 }
 /* section */
@@ -64,7 +72,7 @@ body {
 }
 .section-ttl-ja {
     font-family: "Noto Sans JP", sans-serif;
-    font-size: 1.8rem;/*18px*/
+    font-size: 1.6rem;/*16px*/
     color: #444;
     line-height: 1;
 }
@@ -79,7 +87,7 @@ body {
     margin-top: 48px;
 }
 .section-wrap .section-ttl + .concept-copy {
-    margin-top: 40px;
+    margin-top: 32px;
 }
 @media screen and (max-width: 900px) {
     .section-wrap .section-ttl + .menu-wrap,
@@ -286,8 +294,12 @@ body {
 }
 .kv-copy {
     font-family: "Noto Serif JP", serif;
-    font-size: 2.8rem;
-    text-shadow: 0px 0px 5px rgba(67, 36, 16, 1);
+    font-size: 3.2rem;
+    font-weight: 700;
+    font-family: "Shippori Mincho", serif;
+    text-align: center;
+    line-height: 1.8;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
 }
 @media screen and (max-width: 900px) {
     .kv-copy {
@@ -314,8 +326,10 @@ body {
 /* concept */
 .concept-copy {
     text-align: center;
-    font-weight: bold;
+    font-weight: 400;
+    font-family: "Shippori Mincho", serif;
     font-size: 3.2rem;/*32px*/
+    line-height: 1.6;
 }
 @media screen and (max-width: 900px) {
     .concept-copy {
@@ -346,17 +360,21 @@ body {
     align-items: center;
     margin-top: 80px;
 }
+@media screen and (max-width: 960px) {
+    .concept-detail {
+        flex-direction: column;
+    }
+}
 @media screen and (max-width: 900px) {
     .concept-detail {
         margin-top: 40px;
-        flex-direction: column;
     }
 }
 .concept-detail-content {
     max-width: 450px;
     width: 41%;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 960px) {
     .concept-detail-content {
         max-width: max-content;
         width: 100%;
@@ -364,8 +382,15 @@ body {
 }
 .concept-detail-copy {
     text-align: left;
-    font-weight: bold;
+    font-weight: 400;
+    font-family: "Shippori Mincho", serif;
     font-size: 3.2rem;/*32px*/
+    line-height: 1.6;
+}
+@media screen and (max-width: 1200px) {
+    .concept-detail-copy {
+        font-size: 2.6rem;/*26px*/
+    }
 }
 @media screen and (max-width: 900px) {
     .concept-detail-copy {
@@ -374,7 +399,7 @@ body {
 }
 .concept-detail-txt {
     text-align: left;
-    margin-top: 40px;
+    margin-top: 32px;
 }
 .concept-detail-img-wrap {
     max-width: 580px;
@@ -383,7 +408,7 @@ body {
     display: flex;
     justify-content: space-between;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 960px) {
     .concept-detail-img-wrap {
         justify-content: center;
         width: 100%;
@@ -397,7 +422,7 @@ body {
     max-height: 390px;
     margin-top: 60px;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 960px) {
     .concept-detail-img-box {
         max-width: 48%;
         width: 100%;
