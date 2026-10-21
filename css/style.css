@@ -117,20 +117,12 @@ body {
     justify-content: space-between;
     align-items: center;
     color: #fff;
-    width: 100%;/*90*/
+    width: 100%;
     position: absolute;
-    top: 0;/*40*/
+    top: 0;
     background-color: #424c16;
-    /*left: 5%;*/
     padding: 16px 20px;
     z-index: 100;
-}
-@media screen and (max-width: 900px) {
-    .header {
-        /*width: 94%;
-        top: 10px;
-        left: 3%;*/
-    }
 }
 .header-logo {
     width: 180px;
@@ -357,10 +349,6 @@ body {
 @media screen and (max-width: 900px) {
     .concept-detail {
         margin-top: 40px;
-    }
-}
-@media screen and (max-width: 900px) {
-    .concept-detail {
         flex-direction: column;
     }
 }
@@ -389,7 +377,6 @@ body {
     margin-top: 40px;
 }
 .concept-detail-img-wrap {
-    /*position: relative;*/
     max-width: 580px;
     width: 50%;
     max-height: 450px;
@@ -415,7 +402,6 @@ body {
         max-width: 48%;
         width: 100%;
         max-height: 60%;
-        /*margin-top: 60px;*/
     }
 }
 .concept-detail-img-box + .concept-detail-img-box {
@@ -645,8 +631,6 @@ body {
     .footer-nav-item + .footer-nav-item {
         margin-left: 24px;
     }
-}
-.footer-nav-link {
 }
 .footer .icon-list {
     justify-content: center;
