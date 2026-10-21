@@ -20,18 +20,11 @@ body {
 }
 /* section */
 .section-wrap {
-    padding: 80px 0;
-}
-/* Include the Japanese label in normal flow without shifting content. */
-.section-wrap--titled {
-    padding-top: calc(80px - 1.8rem);
+    padding: 64px 0;
 }
 @media screen and (max-width: 900px) {
     .section-wrap {
-        padding: 50px 0;
-    }
-    .section-wrap--titled {
-        padding-top: calc(50px - 1.8rem);
+        padding: 40px 0;
     }
 }
 .section-inner {
@@ -78,6 +71,23 @@ body {
 .section-ttl-en {
     font: inherit;
     color: inherit;
+}
+/* Space only the content immediately following a section heading. */
+.section-wrap .section-ttl + .menu-wrap,
+.section-wrap .section-ttl + .info-wrap,
+.section-wrap .section-ttl + .access-content {
+    margin-top: 48px;
+}
+.section-wrap .section-ttl + .concept-copy {
+    margin-top: 40px;
+}
+@media screen and (max-width: 900px) {
+    .section-wrap .section-ttl + .menu-wrap,
+    .section-wrap .section-ttl + .info-wrap,
+    .section-wrap .section-ttl + .access-content,
+    .section-wrap .section-ttl + .concept-copy {
+        margin-top: 32px;
+    }
 }
 /* btn */
 .btn-box {
@@ -314,12 +324,10 @@ body {
     text-align: center;
     font-weight: bold;
     font-size: 3.2rem;/*32px*/
-    margin-top: 40px;
 }
 @media screen and (max-width: 900px) {
     .concept-copy {
         font-size: 2.4rem;/*24px*/
-        margin-top: 30px;
     }
 }
 .concept-txt {
@@ -429,7 +437,6 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 60px;
 }
 @media screen and (max-width: 900px) {
     .menu-wrap {
@@ -437,11 +444,7 @@ body {
         flex-wrap: nowrap;
         flex-direction: column;
         align-items: center;
-        margin-top: 40px;
     }
-}
-.menu.__detail .menu-wrap {
-    margin-top: 0;
 }
 .menu-item {
     width: 32%;
@@ -476,12 +479,6 @@ body {
     margin-top: 8px;
 }
 /* info */
-.info-wrap {
-    margin-top: 60px;
-}
-.info.__detail .info-wrap {
-    margin-top: 0;
-}
 .info-content {
     border-bottom: 1px solid #BCBCBC;
     padding-bottom: 16px;
@@ -590,12 +587,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
 }
 @media screen and (max-width: 900px) {
     .access-content {
         flex-direction: column;
-        margin-top: 40px;
     }
 }
 .access-img-box {
