@@ -308,6 +308,11 @@ body {
             0 0 10px rgba(0, 0, 0, 0.5);
     }
 }
+@media screen and (max-width: 360px) {
+    .kv-copy {
+        font-size: 2.4rem;
+    }
+}
 .kv-copy,.kv-detail {
     color: #fff;
     position: absolute;
