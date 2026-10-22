@@ -302,7 +302,10 @@ body {
 }
 @media screen and (max-width: 900px) {
     .kv-copy {
-        font-size: 2.4rem;
+        font-size: 2.8rem;
+        text-shadow:
+            0 0 4px rgba(0, 0, 0, 0.85),
+            0 0 10px rgba(0, 0, 0, 0.5);
     }
 }
 .kv-copy,.kv-detail {
