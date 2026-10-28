@@ -60,14 +60,14 @@ body {
     align-items: center;
     text-align: center;
     font-family: "Shippori Mincho", serif;
-    font-size: 6rem;/*60px*/
-    line-height: 87px;
+    font-size: 5.2rem;/*52px*/
+    line-height: 70px;
     color: #c9976b;
 }
 @media screen and (max-width: 900px) {
     .section-ttl {
-        font-size: 4rem;/*40px*/
-        line-height: 50px;
+        font-size: 3.6rem;/*36px*/
+        line-height: 44px;
     }
 }
 .section-ttl-ja {
@@ -86,17 +86,22 @@ body {
 .section-wrap .section-ttl + .access-content {
     margin-top: 48px;
 }
-.section-wrap .section-ttl + .concept-copy {
-    margin-top: 32px;
-}
 @media screen and (max-width: 900px) {
     .section-wrap .section-ttl + .menu-wrap,
     .section-wrap .section-ttl + .info-wrap,
-    .section-wrap .section-ttl + .access-content,
-    .section-wrap .section-ttl + .concept-copy {
+    .section-wrap .section-ttl + .access-content {
         margin-top: 32px;
     }
 }
+.section-wrap .section-ttl + .concept-copy {
+    margin-top: 22px;
+}
+@media screen and (max-width: 900px) {
+    .section-wrap .section-ttl + .concept-copy {
+        margin-top: 22px;
+    }
+}
+
 /* btn */
 .btn-box {
     text-align: center;
