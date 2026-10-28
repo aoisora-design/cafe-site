@@ -486,10 +486,10 @@ body {
 .menu-name {
     font-size: 1.8rem;/*18px*/
     font-weight: bold;
-    margin-top: 16px;
+    margin-top: 8px;
 }
 .menu-price {
-    margin-top: 8px;
+    margin-top: 0;
 }
 /* info */
 .info-content {
